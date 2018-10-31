@@ -2,7 +2,7 @@ applications:
 - name: tracker-backlog
   path: ./applications/backlog-server/build/libs/backlog-server.jar
   routes:
-  - route: backlog-pal-pikachu
+  - route: backlog-pal-pikachu.cfapps.io
   memory: 1G
   instances: 1
   env:
