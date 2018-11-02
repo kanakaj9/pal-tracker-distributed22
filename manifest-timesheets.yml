@@ -6,6 +6,8 @@ applications:
   memory: 1G
   instances: 1
   env:
+    SECURITY_OAUTH2_RESOURCE_TOKEN-INFO-URI: http://tracker-pal-sso-pikachu.cfapps.io/oauth/check_token
+    SECURITY_OAUTH2_CLIENT_ACCESS-TOKEN-URI: http://tracker-pal-sso-pikachu.cfapps.io/oauth/token
     GRANT_TYPE: client_credentials
     SECURITY_USER_NAME: actuator
     SECURITY_USER_PASSWORD: operations4red
@@ -13,4 +15,3 @@ applications:
   - tracker-timesheets-database
   - tracker-service-registry
   - tracker-circuit-breaker-dashboard
-  - tracker-sso
