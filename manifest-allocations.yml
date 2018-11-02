@@ -9,9 +9,8 @@ applications:
     SECURITY_OAUTH2_RESOURCE_TOKEN-INFO-URI: http://tracker-pal-sso-pikachu.cfapps.io/oauth/check_token
     SECURITY_OAUTH2_CLIENT_ACCESS-TOKEN-URI: http://tracker-pal-sso-pikachu.cfapps.io/oauth/token
     GRANT_TYPE: client_credentials
-    SECURITY_USER_NAME: actuator
-    SECURITY_USER_PASSWORD: operations4red
   services:
   - tracker-allocations-database
   - tracker-service-registry
   - tracker-circuit-breaker-dashboard
+  - tracker-config-server
