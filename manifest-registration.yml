@@ -2,14 +2,11 @@ applications:
 - name: tracker-registration
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
-  - route: registration-pal-pikachu.cfapps.io
+  - route: registration-pal-kj9.cfapps.io
   memory: 1G
   instances: 1
   env:
-    SECURITY_OAUTH2_RESOURCE_TOKEN-INFO-URI: http://tracker-pal-sso-pikachu.cfapps.io/oauth/check_token
-    SECURITY_OAUTH2_CLIENT_ACCESS-TOKEN-URI: http://tracker-pal-sso-pikachu.cfapps.io/oauth/token
-    GRANT_TYPE: client_credentials
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-registration-database
   - tracker-service-registry
-  - tracker-config-server
