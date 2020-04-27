@@ -1,7 +1,0 @@
-applications:
-- name: tracker-sso
-  path: ./platform-services/oauth-server/build/libs/oauth-server.jar
-  routes:
-  - route: tracker-pal-sso-pikachu.cfapps.io
-  memory: 1G
-  instances: 1
