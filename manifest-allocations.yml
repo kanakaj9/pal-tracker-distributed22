@@ -2,15 +2,11 @@ applications:
 - name: tracker-allocations
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
-  - route: allocations-pal-pikachu.cfapps.io
+  - route: allocations-pal-kj9.cfapps.io
   memory: 1G
   instances: 1
   env:
-    SECURITY_OAUTH2_RESOURCE_TOKEN-INFO-URI: http://tracker-pal-sso-pikachu.cfapps.io/oauth/check_token
-    SECURITY_OAUTH2_CLIENT_ACCESS-TOKEN-URI: http://tracker-pal-sso-pikachu.cfapps.io/oauth/token
-    GRANT_TYPE: client_credentials
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-allocations-database
   - tracker-service-registry
-  - tracker-circuit-breaker-dashboard
-  - tracker-config-server
